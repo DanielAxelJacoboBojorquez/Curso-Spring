@@ -12,8 +12,13 @@
 <bean id="miInforme" class="es.pildoras.IoC.Informe">
 
 </bean>
+<!-- Inyección de Dependencias por Constructor -->
 <bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleado">
 	<constructor-arg ref="miInforme">
 	</constructor-arg>
+</bean>
+<!-- Inyección de Dependencias por Setter -->
+<bean id="miSecretarioEmpleado" class="es.pildoras.IoC.SecretarioEmpleado">
+	<property name="informeNuevo" ref="miInforme"></property>
 </bean>
 </beans>

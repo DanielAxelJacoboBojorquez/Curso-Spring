@@ -11,11 +11,17 @@ public class UsoEmpleados {
 		//Primer Paso
 		ClassPathXmlApplicationContext contexto=new ClassPathXmlApplicationContext("applicationContext.xml");
 		//Segundo Paso
-		Empleados Juan=contexto.getBean("miEmpleado", Empleados.class);
+		/*Empleados Juan=contexto.getBean("miEmpleado", Empleados.class);
 		//Tercer Paso
 		System.out.println(Juan.getTareas());
 		//Impresión del Informe
-		System.out.println(Juan.getInforme());
+		System.out.println(Juan.getInforme());*/
+		
+		// Inyección de Dependencias por Setter
+		Empleados Maria=contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		System.out.println(Maria.getTareas());
+		System.out.println(Maria.getInforme());
+		
 		//Cuarto Paso
 		contexto.close();
 	}	
