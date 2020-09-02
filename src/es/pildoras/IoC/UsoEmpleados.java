@@ -14,6 +14,8 @@ public class UsoEmpleados {
 		Empleados Juan=contexto.getBean("miEmpleado", Empleados.class);
 		//Tercer Paso
 		System.out.println(Juan.getTareas());
+		//Impresión del Informe
+		System.out.println(Juan.getInforme());
 		//Cuarto Paso
 		contexto.close();
 	}	

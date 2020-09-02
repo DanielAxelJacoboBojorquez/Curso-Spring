@@ -8,8 +8,12 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
+<!-- Creación de la dependencia -->
+<bean id="miInforme" class="es.pildoras.IoC.Informe">
 
-<bean id="miEmpleado" class="es.pildoras.IoC.DirectorEmpleado">
-
+</bean>
+<bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleado">
+	<constructor-arg ref="miInforme">
+	</constructor-arg>
 </bean>
 </beans>
