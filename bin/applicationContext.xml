@@ -13,12 +13,18 @@
 
 </bean>
 <!-- Inyección de Dependencias por Constructor -->
-<bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleado">
+<bean id="miEmpleado" class="es.pildoras.IoC.DirectorEmpleado">
 	<constructor-arg ref="miInforme">
 	</constructor-arg>
+	<!-- Inyección de Campos -->
+	<property name="email" value="equipo_directivo@pildorasinformaticas.es"></property>
+	<property name="nombreEmpresa" value="Píldoras Informáticas"></property>
 </bean>
 <!-- Inyección de Dependencias por Setter -->
 <bean id="miSecretarioEmpleado" class="es.pildoras.IoC.SecretarioEmpleado">
 	<property name="informeNuevo" ref="miInforme"></property>
+	<!-- Inyección de Campos -->
+	<property name="email" value="secretaria@pildorasinformaticas.es"></property>
+	<property name="nombreEmpresa" value="Píldoras Informáticas"></property>
 </bean>
 </beans>
